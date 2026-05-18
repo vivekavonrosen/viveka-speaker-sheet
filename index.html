@@ -121,10 +121,59 @@
     font-size:18px;
     border-radius:4px;
     transition:transform 0.2s ease, box-shadow 0.2s ease;
+    white-space:nowrap;
+    vertical-align:middle;
   }
   .hero-cta:hover {
     transform:translateY(-2px);
     box-shadow:0 12px 24px rgba(0,0,0,0.25);
+  }
+  .hero-ctas {
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    justify-content:flex-end;
+    margin-top:8px;
+  }
+  .hero-ctas .hero-cta {
+    flex:1 1 auto;
+    text-align:center;
+    margin-left:0 !important;
+    margin-top:0 !important;
+    min-width:280px;
+  }
+  .cta-final-ctas {
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    justify-content:center;
+  }
+  .cta-final-ctas a.btn {
+    flex:1 1 auto;
+    text-align:center;
+    margin-left:0 !important;
+    margin-top:0 !important;
+    min-width:280px;
+    max-width:420px;
+  }
+  .hero-cta.ghost {
+    background:var(--purple-deep);
+    color:var(--gold);
+    margin-left:16px;
+  }
+  .hero-cta.ghost:hover {
+    background:var(--purple);
+  }
+  .cta-final a.btn.ghost {
+    background:#fff;
+    color:var(--purple-deep);
+    margin-left:16px;
+  }
+  .cta-final a.btn.ghost:hover {
+    background:var(--cream);
+  }
+  @media (max-width: 880px) {
+    .hero-cta.ghost, .cta-final a.btn.ghost { margin-left:0; margin-top:20px; }
   }
 
   /* ---------- AS SEEN ON (scrolling marquee) ---------- */
@@ -640,6 +689,8 @@
     font-size:20px;
     border-radius:4px;
     transition:transform 0.2s ease, box-shadow 0.2s ease;
+    white-space:nowrap;
+    vertical-align:middle;
   }
   .cta-final a.btn:hover { transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,0.3); }
 
@@ -683,7 +734,10 @@
       <div class="eyebrow">Keynote · Workshop · Fireside · Panel</div>
       <h1>The Authority Your Expertise Has Already Earned.</h1>
       <p class="lede">Viveka von Rosen speaks at the intersection of <strong>AI, LinkedIn, and Visibility Infrastructure</strong> — giving audiences a structural diagnosis, a working framework, and a clear path forward in a market that rewards architecture over accomplishment.</p>
-      <a href="https://calendly.com/vivekacoach/speaking-inquiry" class="hero-cta">Book Viveka for Your Event</a>
+      <div class="hero-ctas">
+        <a href="https://calendly.com/vivekacoach/speaking-inquiry" class="hero-cta">Book Viveka for Your Event</a>
+        <a href="viveka-von-rosen-speaker-one-sheet.pdf" class="hero-cta ghost" download>Download Viveka's One Sheet</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1138,7 +1192,10 @@
     <div class="eyebrow" style="color:var(--gold);">Book Viveka</div>
     <h2>Bring a structural Keynote to your stage.</h2>
     <p>For event planners and bureaus: send a date, an audience, and a stage. Viveka will read the room, customize the talk, and deliver a Keynote your audience will reference for months.</p>
-    <a href="https://calendly.com/vivekacoach/speaking-inquiry" class="btn">Start a Speaking Conversation</a>
+    <div class="cta-final-ctas">
+      <a href="https://calendly.com/vivekacoach/speaking-inquiry" class="btn">Start a Speaking Conversation</a>
+      <a href="viveka-von-rosen-speaker-one-sheet.pdf" class="btn ghost" download>Download Viveka's One Sheet</a>
+    </div>
 
     <div class="contact-info">
       <p>Email: <a href="mailto:viveka@beyondthedreamboard.com">viveka@beyondthedreamboard.com</a></p>
