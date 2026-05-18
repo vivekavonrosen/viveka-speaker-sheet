@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Viveka von Rosen — Speaker One-Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple:#571F81;
+    --purple-deep:#3d1659;
+    --gold:#DFB24A;
+    --teal:#2C97AF;
+    --teal-deep:#1f6e80;
+    --ink:#1a1a1a;
+    --line:#e5e0eb;
+    --muted:#6b6275;
+    --cream:#faf6ee;
+    --cream-deep:#f4ecda;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  @page {
+    size: letter;
+    margin: 0;
+  }
+  body {
+    font-family:'Lato',sans-serif;
+    color:var(--ink);
+    line-height:1.4;
+    font-size:10pt;
+    background:#fff;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  h1,h2,h3,h4,h5 {
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:0.02em;
+    line-height:1.05;
+    font-weight:400;
+  }
+
+  /* ============ PAGE ============ */
+  .page {
+    width:8.5in;
+    height:11in;
+    page-break-after:always;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .page:last-child { page-break-after:auto; }
+
+  /* ============ PAGE 1 ============ */
+
+  /* HEADER */
+  .header {
+    background-color:#3d1659;
+    background-image:linear-gradient(110deg, #3d1659 0%, #571F81 60%, #3d1659 100%);
+    color:#fff;
+    padding:0.45in 0.55in 0.5in;
+    position:relative;
+    overflow:hidden;
+  }
+  .header-grid {
+    display:grid;
+    grid-template-columns:1fr 1.3fr;
+    gap:0.3in;
+    align-items:center;
+    position:relative;
+    z-index:2;
+  }
+  .header-photo {
+    width:100%;
+    aspect-ratio:4/5;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 10px 28px rgba(0,0,0,0.35);
+  }
+  .header-photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    display:block;
+  }
+  .header-content {}
+  .eyebrow {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:9pt;
+    letter-spacing:0.28em;
+    color:var(--gold);
+    margin-bottom:10px;
+  }
+  .name {
+    font-size:38pt;
+    color:#fff;
+    line-height:0.92;
+    margin-bottom:10px;
+  }
+  .role {
+    font-family:'Lato',sans-serif;
+    font-size:11.5pt;
+    font-weight:300;
+    color:rgba(255,255,255,0.95);
+    margin-bottom:14px;
+    line-height:1.3;
+  }
+  .role strong { color:var(--gold); font-weight:700; }
+  .header-thesis {
+    font-size:9.5pt;
+    line-height:1.4;
+    color:rgba(255,255,255,0.92);
+    border-left:3px solid var(--gold);
+    padding-left:12px;
+  }
+
+  /* GRADIENT BAR */
+  .gradient-bar {
+    height:5px;
+    background:linear-gradient(90deg, var(--purple) 0%, var(--gold) 50%, var(--teal) 100%);
+  }
+
+  /* CREDIBILITY STRIP */
+  .credibility {
+    background:var(--purple-deep);
+    padding:14px 0.55in;
+    color:#fff;
+  }
+  .credibility-grid {
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 14px;
+    justify-content:center;
+    align-items:center;
+  }
+  .credibility-label {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:8pt;
+    letter-spacing:0.24em;
+    color:var(--gold);
+    margin-right:8px;
+  }
+  .credibility-item {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:9pt;
+    letter-spacing:0.1em;
+    color:rgba(255,255,255,0.88);
+    padding:4px 10px;
+    border:1px solid rgba(223,178,74,0.35);
+    border-radius:3px;
+  }
+
+  /* KEYNOTES SECTION */
+  .keynotes-section {
+    padding:0.35in 0.55in 0.25in;
+    background:#fff;
+    flex:1;
+  }
+  .section-title {
+    font-size:24pt;
+    color:var(--purple);
+    margin-bottom:4px;
+  }
+  .section-sub {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:9pt;
+    letter-spacing:0.22em;
+    color:var(--teal);
+    margin-bottom:18px;
+  }
+
+  .keynote-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:14px;
+  }
+  .keynote-card {
+    background:var(--cream);
+    border-radius:6px;
+    padding:16px 14px;
+    position:relative;
+    overflow:hidden;
+    border-top:4px solid var(--purple);
+  }
+  .keynote-card:nth-child(2) { border-top-color:var(--gold); }
+  .keynote-card:nth-child(3) { border-top-color:var(--teal); }
+
+  .keynote-num {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:8pt;
+    letter-spacing:0.24em;
+    color:var(--muted);
+    margin-bottom:4px;
+  }
+  .keynote-title {
+    font-size:18pt;
+    color:var(--purple);
+    margin-bottom:8px;
+    line-height:0.95;
+  }
+  .keynote-subtitle {
+    font-family:'Lato',sans-serif;
+    font-style:italic;
+    font-size:9pt;
+    color:var(--teal-deep);
+    margin-bottom:10px;
+    line-height:1.3;
+    font-weight:400;
+  }
+  .keynote-body {
+    font-size:9pt;
+    line-height:1.4;
+    color:var(--ink);
+    margin-bottom:8px;
+  }
+  .keynote-fit {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:8pt;
+    letter-spacing:0.18em;
+    color:var(--purple);
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px solid var(--line);
+  }
+  .keynote-fit span {
+    font-family:'Lato',sans-serif;
+    letter-spacing:0;
+    font-size:8.5pt;
+    color:var(--muted);
+    display:block;
+    margin-top:2px;
+    font-weight:400;
+    line-height:1.35;
+  }
+
+  /* BOTTOM BAND */
+  .bottom-band {
+    background:var(--cream-deep);
+    padding:0.25in 0.55in;
+    border-top:1px solid var(--line);
+  }
+  .stats {
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:14px;
+    text-align:center;
+  }
+  .stat {
+    padding:6px 4px;
+  }
+  .stat-num {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:28pt;
+    color:var(--purple);
+    line-height:0.95;
+    margin-bottom:4px;
+  }
+  .stat-label {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:7.5pt;
+    letter-spacing:0.18em;
+    color:var(--purple-deep);
+  }
+
+  /* FOOTER PAGE 1 */
+  .page1-footer {
+    padding:14px 0.55in;
+    background:var(--purple);
+    color:#fff;
+    text-align:center;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:10pt;
+    letter-spacing:0.18em;
+  }
+  .page1-footer a { color:var(--gold); text-decoration:none; }
+  .page1-footer .sep { color:rgba(255,255,255,0.4); padding:0 10px; }
+
+  /* ============ PAGE 2 ============ */
+
+  .page2-header {
+    background:linear-gradient(110deg, var(--purple-deep) 0%, var(--purple) 100%);
+    color:#fff;
+    padding:0.35in 0.55in;
+    position:relative;
+  }
+  .page2-header h2 {
+    font-size:30pt;
+    color:#fff;
+    margin-bottom:4px;
+    line-height:0.95;
+  }
+  .page2-header .sub {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:9pt;
+    letter-spacing:0.24em;
+    color:var(--gold);
+  }
+
+  .testimonials-section {
+    padding:0.3in 0.55in 0.2in;
+  }
+  .testimonial-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+    margin-bottom:0.25in;
+  }
+  .testimonial {
+    background:var(--cream);
+    border-radius:5px;
+    padding:14px 14px 12px;
+    border-left:3px solid var(--gold);
+    position:relative;
+  }
+  .testimonial p {
+    font-size:8.5pt;
+    line-height:1.5;
+    font-style:italic;
+    margin-bottom:8px;
+    color:var(--ink);
+  }
+  .testimonial .attr {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:9pt;
+    letter-spacing:0.1em;
+    color:var(--purple);
+  }
+  .testimonial .attr span {
+    display:block;
+    font-family:'Lato',sans-serif;
+    font-size:7.5pt;
+    color:var(--muted);
+    letter-spacing:0;
+    margin-top:2px;
+    font-style:normal;
+    font-weight:400;
+    line-height:1.3;
+  }
+
+  /* BIO + AUDIENCE */
+  .bio-section {
+    padding:0 0.55in 0.25in;
+  }
+  .bio-grid {
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:20px;
+  }
+  .bio-box, .audience-box {
+    background:#fff;
+    padding:16px 16px;
+    border-radius:5px;
+    border:1px solid var(--line);
+  }
+  .bio-box {
+    border-top:4px solid var(--purple);
+  }
+  .audience-box {
+    border-top:4px solid var(--teal);
+  }
+  .bio-box h3, .audience-box h3 {
+    font-size:14pt;
+    color:var(--purple);
+    margin-bottom:10px;
+    letter-spacing:0.04em;
+  }
+  .bio-box p {
+    font-size:9pt;
+    line-height:1.55;
+    margin-bottom:8px;
+  }
+  .bio-box p:last-child { margin-bottom:0; }
+  .bio-box em { color:var(--purple-deep); }
+
+  .audience-box .audience-block {
+    margin-bottom:12px;
+  }
+  .audience-box .audience-block:last-child { margin-bottom:0; }
+  .audience-box .audience-label {
+    font-family:'Bebas Neue',sans-serif;
+    font-size:9pt;
+    letter-spacing:0.16em;
+    color:var(--gold);
+    margin-bottom:4px;
+  }
+  .audience-box .audience-text {
+    font-size:8.5pt;
+    line-height:1.45;
+    color:var(--ink);
+  }
+
+  /* PAGE 2 FOOTER */
+  .page2-footer {
+    margin-top:auto;
+    background:linear-gradient(135deg, var(--purple-deep) 0%, var(--purple) 100%);
+    color:#fff;
+    padding:0.3in 0.55in;
+    position:relative;
+  }
+  .footer-grid {
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:24px;
+    align-items:center;
+  }
+  .footer-cta h3 {
+    font-size:22pt;
+    color:#fff;
+    margin-bottom:6px;
+    line-height:0.95;
+  }
+  .footer-cta p {
+    font-size:9.5pt;
+    color:rgba(255,255,255,0.92);
+    line-height:1.4;
+  }
+  .footer-contact {
+    text-align:right;
+  }
+  .footer-contact-item {
+    margin-bottom:6px;
+    font-size:9pt;
+    color:rgba(255,255,255,0.95);
+  }
+  .footer-contact-item .label {
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:0.18em;
+    color:var(--gold);
+    font-size:7.5pt;
+    display:block;
+    margin-bottom:2px;
+  }
+  .footer-contact-item a {
+    color:#fff;
+    text-decoration:none;
+  }
+  .footer-book-button {
+    display:inline-block;
+    background:var(--gold);
+    color:var(--purple-deep);
+    padding:10px 20px;
+    text-decoration:none;
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:0.18em;
+    font-size:10pt;
+    border-radius:3px;
+    margin-top:10px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ====================== PAGE 1 ====================== -->
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-grid">
+      <div class="header-photo">
+        <img src="https://images.squarespace-cdn.com/content/v1/6519cb393c448135ab61d5d3/4d952d2b-17ee-46a1-b3c0-ee4053cf86bb/professional_speaker_in_thoughtful_moment_during_panel_discussion_black_suit_with_modest_purple_dre_qde8uh2akfk4di8tmkn8_1.png" alt="Viveka von Rosen">
+      </div>
+      <div class="header-content">
+        <div class="eyebrow">Keynote · Workshop · Fireside · Panel</div>
+        <h1 class="name">VIVEKA<br>VON ROSEN</h1>
+        <div class="role"><strong>LinkedIn Expert & AI Strategist</strong> for Women Founders</div>
+        <p class="header-thesis">Audiences leave with named, teachable frameworks — not slogans. A structural diagnosis. A clear path forward in a market that rewards architecture over accomplishment.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gradient-bar"></div>
+
+  <!-- CREDIBILITY STRIP -->
+  <div class="credibility">
+    <div class="credibility-grid">
+      <div class="credibility-label">AS SEEN IN</div>
+      <div class="credibility-item">NATO / OTAN</div>
+      <div class="credibility-item">Forbes</div>
+      <div class="credibility-item">Fast Company</div>
+      <div class="credibility-item">LinkedIn Learning</div>
+      <div class="credibility-item">Inbound</div>
+      <div class="credibility-item">SHRM</div>
+      <div class="credibility-item">Content Marketing World</div>
+      <div class="credibility-item">Social Media Marketing World</div>
+      <div class="credibility-item">Oracle</div>
+      <div class="credibility-item">Amazon</div>
+    </div>
+  </div>
+
+  <!-- KEYNOTES -->
+  <div class="keynotes-section">
+    <h2 class="section-title">THREE SIGNATURE KEYNOTES</h2>
+    <div class="section-sub">EACH BUILT ON A NAMED, PROPRIETARY FRAMEWORK</div>
+
+    <div class="keynote-grid">
+      <div class="keynote-card">
+        <div class="keynote-num">KEYNOTE 01</div>
+        <h3 class="keynote-title">The Authority Gap</h3>
+        <p class="keynote-subtitle">Why the most qualified expert in the room rarely gets the stage.</p>
+        <p class="keynote-body">Introduces <strong>The Authority Gap Model™</strong> — a four-gap diagnostic that maps the structural breakdowns between where an established expert sits and where her credibility should already be working for her.</p>
+        <div class="keynote-fit">BEST FIT<span>Women's leadership · associations · founder communities · executive women's groups</span></div>
+      </div>
+
+      <div class="keynote-card">
+        <div class="keynote-num">KEYNOTE 02</div>
+        <h3 class="keynote-title">The Visibility Architecture Stack</h3>
+        <p class="keynote-subtitle">Why the most disciplined experts are not the most visible.</p>
+        <p class="keynote-body">Introduces <strong>The Visibility Architecture Stack™</strong> — a three-layer model showing the correct sequence for building visible authority that compounds: Positioning, Infrastructure, Amplification.</p>
+        <div class="keynote-fit">BEST FIT<span>Founders · consultants · coaches · authors · speakers · personal brand events</span></div>
+      </div>
+
+      <div class="keynote-card">
+        <div class="keynote-num">KEYNOTE 03</div>
+        <h3 class="keynote-title">The AI Amplification Board</h3>
+        <p class="keynote-subtitle">AI is not replacing 20-year expertise. It's amplifying it.</p>
+        <p class="keynote-body">Introduces <strong>The AI Amplification Board™</strong> — a system for using AI not as a content generator but as a strategic extension of an expert's voice, judgment, and IP.</p>
+        <div class="keynote-fit">BEST FIT<span>Corporate · future-of-work · innovation · executive education · women in tech</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS BAND -->
+  <div class="bottom-band">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">21</div>
+        <div class="stat-label">YEARS ON LINKEDIN</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">PUBLISHED BOOKS</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2</div>
+        <div class="stat-label">COMPANIES BUILT</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">14+</div>
+        <div class="stat-label">YEARS ON STAGE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 1 FOOTER -->
+  <div class="page1-footer">
+    SPEAKING.BEYONDTHEDREAMBOARD.COM <span class="sep">·</span> <a href="mailto:viveka@beyondthedreamboard.com">VIVEKA@BEYONDTHEDREAMBOARD.COM</a>
+  </div>
+
+</div>
+
+<!-- ====================== PAGE 2 ====================== -->
+<div class="page">
+
+  <!-- PAGE 2 HEADER -->
+  <div class="page2-header">
+    <div class="sub">WHAT EVENT PLANNERS SAY</div>
+    <h2>TESTIMONIALS &amp; BIO</h2>
+  </div>
+
+  <div class="gradient-bar"></div>
+
+  <!-- TESTIMONIALS -->
+  <div class="testimonials-section">
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"Nomen est Omen" in the case of LinkedIn Expert Viveka von Rosen. I was happy to have her on board as an expert speaker for NATO's Social Media Forum for International Organisations. Her enthusiasm and willingness to share her knowledge impressed all conference participants.</p>
+        <div class="attr">FRANKY SAEGERMAN<span>Head of Digital Insights & Social Media · NATO</span></div>
+      </div>
+      <div class="testimonial">
+        <p>Viveka is an exceptionally knowledgeable LinkedIn and social media trainer. She has the ability to chunk down and sequence everything you need to know to optimize and succeed using LinkedIn. I would highly recommend Viveka for your team as a speaker, trainer and consultant. Two thumbs way up.</p>
+        <div class="attr">MARI SMITH<span>Premier Social Media Thought Leader & Speaker</span></div>
+      </div>
+      <div class="testimonial">
+        <p>Viveka spoke numerous times for us at Social Media Marketing World. She is the consummate professional — always prepared, eager to adapt, and focused on serving the community. When Viveka shows up for your event, she participates fully. She's like an extension of your team.</p>
+        <div class="attr">PHIL MERSHON<span>Director of Experience · Social Media Marketing World</span></div>
+      </div>
+      <div class="testimonial">
+        <p>It is rare to find any individual who is able to simultaneously maintain the proper balance of growth, communications and experience. You have it all. Your expertise and awareness of others is a unique combination that is greatly appreciated by all who have worked with you.</p>
+        <div class="attr">FRANK COTTLE<span>Chairman & Founder · Alliance Business Centers Network</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BIO + AUDIENCE -->
+  <div class="bio-section">
+    <div class="bio-grid">
+      <div class="bio-box">
+        <h3>SPEAKER BIO</h3>
+        <p>Viveka von Rosen is a LinkedIn Expert and AI Strategist for Women Founders. A 21-year LinkedIn practitioner, bestselling author of <em>LinkedIn Marketing: An Hour a Day</em>, LinkedIn Learning and Lynda.com author, and co-founder of Vengreso, she speaks on AI, authority, and Visibility Infrastructure for expert women.</p>
+        <p>She is the architect of three proprietary frameworks — The Authority Gap Model™, The Visibility Architecture Stack™, and The AI Amplification Board™ — that her audiences leave with as named, teachable tools.</p>
+        <p>Her work has appeared in Forbes, Fast Company, Money Magazine, and the LinkedIn Marketing and Sales blogs. She has spoken to audiences from Auckland to Anchorage for organizations including Inbound, NATO/OTAN, SHRM, Oracle, Amazon, Social Media Marketing World, and the National Speakers Association.</p>
+      </div>
+
+      <div class="audience-box">
+        <h3>WHO SHE SPEAKS TO</h3>
+        <div class="audience-block">
+          <div class="audience-label">CORPORATE & LEADERSHIP</div>
+          <div class="audience-text">L&D programs · women in leadership conferences · executive women's groups · associations · future-of-work summits · sales kickoffs</div>
+        </div>
+        <div class="audience-block">
+          <div class="audience-label">ENTREPRENEURIAL & EXPERT</div>
+          <div class="audience-text">Founder & consultant communities · coach and advisor audiences · author and speaker events · personal brand summits · marketing conferences</div>
+        </div>
+        <div class="audience-block">
+          <div class="audience-label">FORMATS</div>
+          <div class="audience-text">45–60 min keynote · half-day workshop · executive fireside · expert panel · virtual or in-person</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 FOOTER -->
+  <div class="page2-footer">
+    <div class="footer-grid">
+      <div class="footer-cta">
+        <h3>BOOK VIVEKA FOR YOUR STAGE</h3>
+        <p>Send a date, audience, and stage. Viveka will read the room, customize the talk, and deliver a keynote your audience will reference for months.</p>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-contact-item">
+          <span class="label">EMAIL</span>
+          <a href="mailto:viveka@beyondthedreamboard.com">viveka@beyondthedreamboard.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="label">SPEAKING INQUIRIES</span>
+          <a href="https://calendly.com/vivekacoach/speaking-inquiry">calendly.com/vivekacoach/speaking-inquiry</a>
+        </div>
+        <div class="footer-contact-item">
+          <span class="label">WEB</span>
+          speaking.beyondthedreamboard.com
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
